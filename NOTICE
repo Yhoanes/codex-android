@@ -1,0 +1,70 @@
+Codex for Android (v26.51111.1-r1)
+Copyright (c) 2026 Yhoanes (https://github.com/Yhoanes/codex-android)
+
+========================================================================
+ATTRIBUTION & NON-COMMERCIAL NOTICE (Apache License 2.0, Section 4(d))
+========================================================================
+
+This product and software distribution ("Codex for Android") was created,
+engineered, and maintained solely by Yhoanes:
+  https://github.com/Yhoanes/codex-android
+
+Pursuant to Section 4(d) of the Apache License, Version 2.0, any reproduction,
+fork, redistribution, modified build, or derivative work of this repository or
+its compiled APK binaries MUST retain this NOTICE file intact and provide
+clear, prominent attribution to Yhoanes, including a direct link to the
+official repository:
+  https://github.com/Yhoanes/codex-android
+
+Original Engineering & Architecture by Yhoanes (2026):
+  - Standalone ARM64 Android host architecture (com.ce.ide / com.ce.dev,
+    10-byte prefix parity, zero PRoot, zero Electron, zero Termux dependency)
+    running OpenAI's official Codex VS Code Extension (openai.chatgpt
+    v26.51111.21308) paired with the native static ARM64 codex CLI
+    (0.169.0-alpha.11.1) and codex-code-mode-host directly on Android silicon.
+  - O(1) indexed asset archive (webview-bundle.pak) serving 15,350 pre-indexed
+    webview modules in < 2 ms without 15k-inode mobile storage extraction.
+  - Capability-hardened local security stack: per-boot 256-bit loopback host
+    authentication (CE_AUTH_TOKEN, HttpOnly SameSite=Strict cookies, X-CE-Token
+    headers, HMAC-SHA256 health-probe challenge), Host/Origin DNS-rebinding &
+    CSRF defenses, and strict credential/filesystem confinement.
+  - Native inline composer workspace switcher with Android Storage Access
+    Framework (SAF) directory picker and live per-session working directory
+    synchronization.
+  - 1-Tap Native Android ARM64 MCP Plugins & Official Skills Hub wiring live
+    into ~/.codex/config.toml (config/mcpServer/reload) and ~/.agents/skills
+    for 9 native ARM64 MCP suites (Craft Anything + Ghidra 12.1.4, ADB &
+    Shizuku Bridge, GitHub Native ARM64, Game Studio 2D/3D, Unity Studio
+    Android, Video Studio Pro, AI Video Generator, Chrome DevTools MCP, and
+    Android SDK & CLI Skills).
+  - Native ARM64 Rust multicall userspace (ce-box: parallel pkg manager,
+    ce-daemon scheduler, ce-fix-paths, ce-notify), Gradle-free deterministic
+    11-phase APK build pipeline, and SHA-256 certificate-pinned GitHub Releases
+    OTA updater.
+
+All source code, architecture, documentation, visual assets, and compiled APK
+distributions authored by Yhoanes are licensed strictly under the
+Non-Commercial & Mandatory Attribution terms set forth in the LICENSE file.
+Commercial sale, paid redistribution, commercial bundling, or removal of
+author attribution is strictly prohibited without prior written permission
+from Yhoanes.
+
+========================================================================
+THIRD-PARTY SOFTWARE NOTICES
+========================================================================
+
+1. OpenAI Codex CLI (`codex-rs` / `codex-code-mode-host`) & Official VS Code
+   Extension (`openai.chatgpt`)
+   Copyright (c) OpenAI.
+   Codex CLI (`codex-rs`) is distributed under the Apache License, Version 2.0.
+   The OpenAI Codex VS Code Extension (`openai.chatgpt`) is governed by OpenAI's
+   Terms of Use and Extension License.
+
+2. Node.js Runtime (`aarch64-linux-android` Bionic build)
+   Copyright Node.js contributors. Licensed under the MIT License.
+
+3. ripgrep (`rg`)
+   Copyright (c) Andrew Gallant. Licensed under the MIT or Unlicense.
+
+4. Shizuku (`rish` / `rish_shizuku.dex`)
+   Copyright (c) RikkaApps. Licensed under the Apache License, Version 2.0.

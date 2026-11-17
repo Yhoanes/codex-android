@@ -1,0 +1,12 @@
+# Minimal OpenSSL 3 configuration for Claude Code Android
+HOME = .
+openssl_conf = openssl_init
+
+[openssl_init]
+providers = provider_sect
+
+[provider_sect]
+default = default_sect
+
+[default_sect]
+activate = 1

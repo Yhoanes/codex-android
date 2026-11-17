@@ -1,0 +1,140 @@
+{
+  "plugins": [
+    {
+      "id": "craft-anything",
+      "name": "craft-anything",
+      "title": "Craft Anything + Ghidra",
+      "version": "0.5.0",
+      "icon": "binary",
+      "shortEs": "Ingeniería inversa ARM64 (ELF, APK/DEX, IL2CPP, Firmware) y Ghidra 12.1",
+      "shortEn": "ARM64 binary & firmware reverse engineering (ELF, APK, IL2CPP) & Ghidra",
+      "descriptionEs": "335 herramientas MCP nativas en Rust ARM64 para ingeniería inversa de binarios, consolas y firmware (ELF, PE, APK/DEX, .NET/NativeAOT, WASM, ESP32/UF2, Godot .pck, Unity IL2CPP) y Ghidra 12.1.4.",
+      "description": "335 native ARM64 Rust MCP tools for binary & firmware reverse engineering (ELF, PE, APK/DEX, .NET/NativeAOT, WASM, ESP32/UF2, Godot .pck, Unity IL2CPP) & Ghidra 12.1.4.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/craft-anything/craft-anything.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/craft-anything/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "agy-adb-bridge",
+      "name": "agy-adb-bridge",
+      "title": "ADB & Shizuku Bridge",
+      "version": "1.0.1",
+      "icon": "terminal",
+      "shortEs": "Permisos shell uid=2000 persistentes vía ADB local y Shizuku rish",
+      "shortEn": "Persistent uid=2000 shell permissions via local wireless ADB & Shizuku",
+      "descriptionEs": "Puente nativo en Rust ARM64 con permisos uid=2000(shell) persistentes: vinculación ADB inalámbrica de 6 dígitos en 127.0.0.1:5555 sin Wi-Fi y wrapper rish anti-bloqueo.",
+      "description": "Persistent uid=2000(shell) native Rust ADB & Shizuku bridge with 6-digit wireless pairing and offline 127.0.0.1:5555 mode.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/agy-adb-bridge/agy-adb-bridge.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/agy-adb-bridge/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "github",
+      "name": "github",
+      "title": "GitHub Native ARM64",
+      "version": "2.1.1",
+      "icon": "github",
+      "shortEs": "91 herramientas locales para repositorios, PRs, Actions CI/CD e Issues",
+      "shortEn": "91 local ARM64 tools for repos, PRs, Actions CI/CD logs, and Issues",
+      "descriptionEs": "91 herramientas MCP nativas ARM64 de GitHub (repositorios, PRs, revisión de código, issues, logs de Actions CI/CD y seguridad) + puente OAuth para Git/GH sin Docker.",
+      "description": "91 native ARM64 GitHub MCP tools (repos, PRs, code review, issues, Actions CI/CD logs & security) + Bionic Git/GH OAuth bridge.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/github/github.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/github/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "game-studio",
+      "name": "game-studio",
+      "title": "Game Studio 2D/3D (Godot)",
+      "version": "2.0.0",
+      "icon": "gamepad",
+      "shortEs": "Motor Godot 4 Vulkan 120 FPS, GDExtension C++/Rust y compilador APK local",
+      "shortEn": "Godot 4 Vulkan 120 FPS engine, C++/Rust GDExtension & offline APK builder",
+      "descriptionEs": "16 herramientas MCP nativas en Rust ARM64 + GDExtension (C++/Rust) + compilador local de APK sin nube para Godot 4 Vulkan (120–144 FPS), shaders MultiMesh y profiler en vivo.",
+      "description": "16 native ARM64 Rust MCP tools + C++/Rust GDExtension + offline local APK builder for Godot 4 Vulkan (120-144 FPS) & live profiler.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/game-studio/game-studio.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/game-studio/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "unity-android",
+      "name": "unity-android",
+      "title": "Unity Studio Android",
+      "version": "1.0.0",
+      "icon": "cube",
+      "shortEs": "Proyectos Unity 6.3 LTS URP 2D/3D, auditoría YAML, Unity CLI y GameCI",
+      "shortEn": "Unity 6.3 LTS URP 2D/3D projects, YAML audit, Unity CLI & GameCI builds",
+      "descriptionEs": "13 herramientas MCP nativas en Rust ARM64 + Unity CLI v1.0.0 oficial porteado: crea juegos Unity 6.3 LTS URP 2D/3D a 120 FPS, auditoría YAML/GUID, GameCI y depuración rish.",
+      "description": "13 native ARM64 Rust MCP tools + ported official Unity CLI v1.0.0 for Unity 6.3 LTS URP 2D/3D 120 FPS mobile games, YAML audit & GameCI.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/unity-android/unity-android.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/unity-android/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "agy-video-studio",
+      "name": "agy-video-studio",
+      "title": "Video Studio Pro",
+      "version": "4.0.0",
+      "icon": "video",
+      "shortEs": "Edición multipista 60 FPS con GPU MediaCodec, subtítulos y puente CapCut",
+      "shortEn": "60 FPS multi-track GPU MediaCodec video editing, captions & CapCut bridge",
+      "descriptionEs": "Editor profesional nativo en Rust ARM64 y estudio Motion 60 FPS: multipista V2, subtítulos dinámicos, limpieza de voz, codificación GPU h264_mediacodec y exportación a CapCut.",
+      "description": "Native ARM64 Rust pro video editor & 60 FPS motion studio with GPU h264_mediacodec encoding, speech cleanup & CapCut export.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/agy-video-studio/agy-video-studio.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/agy-video-studio/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "agy-video-gen",
+      "name": "agy-video-gen",
+      "title": "AI Video Generator",
+      "version": "1.0.0",
+      "icon": "sparkles",
+      "shortEs": "Generación Text-to-Video, Image-to-Video y Lip-Sync con escalado 1080p",
+      "shortEn": "Text-to-Video, Image-to-Video & Lip-Sync generation with 1080p upscaling",
+      "descriptionEs": "Motor nativo en Rust ARM64 de generación de vídeo con IA (Text-to-Video, Image-to-Video consistente, First-Last Frame y Lip-Sync) + Super-Resolución GPU 1080p.",
+      "description": "Native ARM64 Rust AI video generator (Text-to-Video, Image-to-Video, First-Last Frame & Lip-Sync) + 1080p CAS GPU super-resolution.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/agy-video-gen/agy-video-gen.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/agy-video-gen/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "chrome-devtools-plugin",
+      "name": "chrome-devtools-plugin",
+      "title": "Chrome DevTools MCP",
+      "version": "1.10.4",
+      "icon": "globe",
+      "shortEs": "Automatización Chromium headless ARM64, inspección DOM/red y capturas",
+      "shortEn": "Headless ARM64 Chromium automation, DOM/network inspection & screenshots",
+      "descriptionEs": "Automatización nativa de Chromium headless en Android ARM64, inspección de DOM y red, capturas de pantalla y auditoría Web Vitals mediante Chrome DevTools Protocol.",
+      "description": "Native Android ARM64 headless Chromium automation, DOM/network inspection, screenshots & Web Vitals debugging via CDP.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/chrome-devtools-plugin/chrome-devtools-plugin.zip"
+    },
+    {
+      "id": "android-cli-plugin",
+      "name": "android-cli-plugin",
+      "title": "Android SDK & CLI Skills",
+      "version": "1.0.16",
+      "icon": "smartphone",
+      "shortEs": "Habilidades oficiales de arquitectura Android, Compose y utilidades ADB",
+      "shortEn": "Official Android architecture, Jetpack Compose & ADB device skills",
+      "descriptionEs": "Puente Android CLI en el dispositivo, utilidades Shizuku rish y habilidades oficiales de arquitectura Android y Jetpack Compose adaptadas a ARM64.",
+      "description": "On-device Android CLI bridge, Shizuku rish helpers, and official Android architecture skills adapted for ARM64.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/android-cli-plugin/android-cli-plugin.zip"
+    }
+  ]
+}

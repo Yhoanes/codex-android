@@ -1,0 +1,21 @@
+#!/system/bin/sh
+case "$0" in
+  */*) RBIN="${0%/*}" ;;
+  *)   RBIN="." ;;
+esac
+RBIN="$(cd "$RBIN" && pwd)"
+RT="${RBIN%/*}"
+FILES_DIR="${RT%/*}"
+unset LD_LIBRARY_PATH
+unset LD_PRELOAD
+export HOME="${HOME:-$FILES_DIR}"
+export PREFIX="${PREFIX:-$FILES_DIR/usr}"
+export TMPDIR="${TMPDIR:-$PREFIX/tmp}"
+export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+export SSL_CERT_FILE="${SSL_CERT_FILE:-$RT/certs/ca-certificates.crt}"
+export SSL_CERT_DIR="${SSL_CERT_DIR:-$RT/certs}"
+export BROWSER="${BROWSER:-$RBIN/xdg-open}"
+export PATH="$RBIN:$PREFIX/bin:$HOME/.local/bin:/system/bin"
+/system/bin/mkdir -p "$TMPDIR" "$CODEX_HOME" 2>/dev/null || true
+
+exec "$RBIN/codex.elf" "$@"

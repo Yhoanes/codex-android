@@ -1,0 +1,25 @@
+#!/system/bin/sh
+case "$0" in
+  */*) RBIN="${0%/*}" ;;
+  *)   RBIN="." ;;
+esac
+RBIN="$(cd "$RBIN" && pwd)"
+RT="${RBIN%/*}"
+FILES_DIR="${RT%/*}"
+unset LD_PRELOAD
+export HOME="${HOME:-$FILES_DIR}"
+export PREFIX="${PREFIX:-$FILES_DIR/usr}"
+export TMPDIR="${TMPDIR:-$PREFIX/tmp}"
+export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+export LD_LIBRARY_PATH="$RT/node-lib:$PREFIX/lib"
+if [ -f "$PREFIX/etc/tls/openssl.cnf" ]; then
+  export OPENSSL_CONF="$PREFIX/etc/tls/openssl.cnf"
+else
+  export OPENSSL_CONF="$RT/certs/openssl.cnf"
+fi
+export SSL_CERT_FILE="${SSL_CERT_FILE:-$RT/certs/ca-certificates.crt}"
+export NODE_EXTRA_CA_CERTS="${NODE_EXTRA_CA_CERTS:-$RT/certs/ca-certificates.crt}"
+export BROWSER="${BROWSER:-$RBIN/xdg-open}"
+export CE_CODEX_BIN="$RBIN/codex"
+/system/bin/mkdir -p "$TMPDIR" "$CODEX_HOME" 2>/dev/null || true
+exec "$RBIN/node.elf" "$RT/host/codex-serve.cjs" "$@"

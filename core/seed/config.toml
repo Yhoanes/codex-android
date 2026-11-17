@@ -1,0 +1,6 @@
+# Codex for Android — Default Native ARM64 Configuration
+# Linux user-namespace sandboxing (bwrap) is blocked by Android SELinux.
+sandbox_mode = "danger-full-access"
+
+[features]
+code_mode_host = true

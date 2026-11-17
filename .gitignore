@@ -1,0 +1,61 @@
+# Build staging & compiled artifacts
+build/*
+!build/lib/
+!build/phases/
+!build/tools/
+dist/*
+!dist/.gitkeep
+app/gen/
+web/generated/
+
+# Track <80 MB split chunks + SHA-256 manifests; ignore reassembled >100 MB archives
+core/codex-core.tar.gz
+core/webview-bundle.pak
+core/*.tar
+!core/codex-core.tar.gz.part-*
+!core/codex-core.tar.gz.sha256
+!core/webview-bundle.pak.part-*
+!core/webview-bundle.pak.sha256
+
+# Python & Rust build caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+env/rust/*/target/
+target/
+
+# Logs, temporary & signature files
+*.log
+*.tmp
+*.bak
+*.orig
+*.swp
+*~
+*.idsig
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Sensitive credentials & keystores (NEVER commit signing keys or tokens)
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pk8
+*.pem
+!core/certs/*.pem
+!env/overlay/etc/tls/cert.pem
+signing.env
+keystore.env
+*.key
+*-token
+auth.json
+secrets.json
+.netrc
+.env
+.env.*
+
+# Scratch / local workspaces
+scratch/

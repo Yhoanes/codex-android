@@ -1,0 +1,181 @@
+/* Codex for Android — Official VS Code Dark & Light Theme Variables */
+:root,
+html[data-ce-theme="dark"],
+body.vscode-dark {
+  color-scheme: dark;
+  --ce-bg-primary: #0d0d0d;
+  --ce-bg-secondary: #141414;
+  --ce-bg-elevated: #1c1c1c;
+  --ce-bg-hover: rgba(255, 255, 255, 0.06);
+  --ce-bg-active: rgba(255, 255, 255, 0.10);
+  --ce-fg-primary: #ececec;
+  --ce-fg-secondary: #9b9b9b;
+  --ce-fg-muted: #6e6e6e;
+  --ce-border: rgba(255, 255, 255, 0.10);
+  --ce-accent: #10a37f;
+  --ce-accent-fg: #ffffff;
+
+  /* Official VS Code Webview CSS Tokens consumed by openai.chatgpt webview */
+  --vscode-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --vscode-font-weight: 400;
+  --vscode-font-size: 13px;
+  --vscode-editor-font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --vscode-editor-font-weight: 400;
+  --vscode-editor-font-size: 13px;
+  --vscode-chat-font-size: 14px;
+  --vscode-chat-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --vscode-foreground: #ececec;
+  --vscode-descriptionForeground: #9b9b9b;
+  --vscode-errorForeground: #f87171;
+  --vscode-focusBorder: rgba(255, 255, 255, 0.24);
+  --vscode-widget-border: rgba(255, 255, 255, 0.10);
+  --vscode-contrastBorder: transparent;
+
+  --vscode-editor-background: #0d0d0d;
+  --vscode-editor-foreground: #ececec;
+  --vscode-editorWidget-background: #171717;
+  --vscode-editorWidget-foreground: #ececec;
+  --vscode-editorWidget-border: rgba(255, 255, 255, 0.12);
+
+  --vscode-sideBar-background: #0d0d0d;
+  --vscode-sideBar-foreground: #ececec;
+  --vscode-sideBar-border: rgba(255, 255, 255, 0.09);
+  --vscode-sideBarSectionHeader-background: #141414;
+  --vscode-sideBarSectionHeader-foreground: #ececec;
+
+  --vscode-panel-background: #0d0d0d;
+  --vscode-panel-border: rgba(255, 255, 255, 0.10);
+
+  --vscode-input-background: #1a1a1a;
+  --vscode-input-foreground: #ececec;
+  --vscode-input-border: rgba(255, 255, 255, 0.12);
+  --vscode-input-placeholderForeground: #7a7a7a;
+
+  --vscode-dropdown-background: #1a1a1a;
+  --vscode-dropdown-foreground: #ececec;
+  --vscode-dropdown-border: rgba(255, 255, 255, 0.12);
+
+  --vscode-button-background: #ececec;
+  --vscode-button-foreground: #0d0d0d;
+  --vscode-button-hoverBackground: #ffffff;
+  --vscode-button-secondaryBackground: #242424;
+  --vscode-button-secondaryForeground: #ececec;
+  --vscode-button-secondaryHoverBackground: #2f2f2f;
+
+  --vscode-badge-background: #262626;
+  --vscode-badge-foreground: #ececec;
+
+  --vscode-list-hoverBackground: rgba(255, 255, 255, 0.06);
+  --vscode-list-activeSelectionBackground: rgba(255, 255, 255, 0.11);
+  --vscode-list-activeSelectionForeground: #ffffff;
+  --vscode-list-inactiveSelectionBackground: rgba(255, 255, 255, 0.07);
+
+  --vscode-menu-background: #1c1c1c;
+  --vscode-menu-foreground: #ececec;
+  --vscode-menu-border: rgba(255, 255, 255, 0.12);
+  --vscode-menu-selectionBackground: rgba(255, 255, 255, 0.09);
+  --vscode-menu-selectionForeground: #ffffff;
+
+  --vscode-textCodeBlock-background: #161616;
+  --vscode-textBlockQuote-background: #161616;
+  --vscode-textBlockQuote-border: rgba(255, 255, 255, 0.18);
+  --vscode-textLink-foreground: #60a5fa;
+  --vscode-textLink-activeForeground: #93c5fd;
+
+  --vscode-diffEditor-insertedTextBackground: rgba(34, 197, 94, 0.16);
+  --vscode-diffEditor-removedTextBackground: rgba(239, 68, 68, 0.16);
+  --vscode-scrollbarSlider-background: rgba(255, 255, 255, 0.14);
+  --vscode-scrollbarSlider-hoverBackground: rgba(255, 255, 255, 0.24);
+}
+
+html[data-ce-theme="light"],
+body.vscode-light {
+  color-scheme: light;
+  --ce-bg-primary: #ffffff;
+  --ce-bg-secondary: #f7f7f8;
+  --ce-bg-elevated: #ffffff;
+  --ce-bg-hover: rgba(0, 0, 0, 0.05);
+  --ce-bg-active: rgba(0, 0, 0, 0.08);
+  --ce-fg-primary: #0d0d0d;
+  --ce-fg-secondary: #5d5d5d;
+  --ce-fg-muted: #8e8e8e;
+  --ce-border: rgba(0, 0, 0, 0.10);
+  --ce-accent: #10a37f;
+  --ce-accent-fg: #ffffff;
+
+  --vscode-foreground: #0d0d0d;
+  --vscode-descriptionForeground: #5d5d5d;
+  --vscode-errorForeground: #dc2626;
+  --vscode-focusBorder: rgba(0, 0, 0, 0.25);
+  --vscode-widget-border: rgba(0, 0, 0, 0.10);
+
+  --vscode-editor-background: #ffffff;
+  --vscode-editor-foreground: #0d0d0d;
+  --vscode-editorWidget-background: #f7f7f8;
+  --vscode-editorWidget-foreground: #0d0d0d;
+  --vscode-editorWidget-border: rgba(0, 0, 0, 0.10);
+
+  --vscode-sideBar-background: #ffffff;
+  --vscode-sideBar-foreground: #0d0d0d;
+  --vscode-sideBar-border: rgba(0, 0, 0, 0.09);
+  --vscode-sideBarSectionHeader-background: #f7f7f8;
+  --vscode-sideBarSectionHeader-foreground: #0d0d0d;
+
+  --vscode-panel-background: #ffffff;
+  --vscode-panel-border: rgba(0, 0, 0, 0.10);
+
+  --vscode-input-background: #f4f4f5;
+  --vscode-input-foreground: #0d0d0d;
+  --vscode-input-border: rgba(0, 0, 0, 0.12);
+  --vscode-input-placeholderForeground: #8e8e8e;
+
+  --vscode-dropdown-background: #f4f4f5;
+  --vscode-dropdown-foreground: #0d0d0d;
+  --vscode-dropdown-border: rgba(0, 0, 0, 0.12);
+
+  --vscode-button-background: #0d0d0d;
+  --vscode-button-foreground: #ffffff;
+  --vscode-button-hoverBackground: #262626;
+  --vscode-button-secondaryBackground: #ececee;
+  --vscode-button-secondaryForeground: #0d0d0d;
+  --vscode-button-secondaryHoverBackground: #e2e2e5;
+
+  --vscode-badge-background: #ececee;
+  --vscode-badge-foreground: #0d0d0d;
+
+  --vscode-list-hoverBackground: rgba(0, 0, 0, 0.05);
+  --vscode-list-activeSelectionBackground: rgba(0, 0, 0, 0.09);
+  --vscode-list-activeSelectionForeground: #0d0d0d;
+  --vscode-list-inactiveSelectionBackground: rgba(0, 0, 0, 0.06);
+
+  --vscode-menu-background: #ffffff;
+  --vscode-menu-foreground: #0d0d0d;
+  --vscode-menu-border: rgba(0, 0, 0, 0.12);
+  --vscode-menu-selectionBackground: rgba(0, 0, 0, 0.07);
+  --vscode-menu-selectionForeground: #0d0d0d;
+
+  --vscode-textCodeBlock-background: #f4f4f5;
+  --vscode-textBlockQuote-background: #f4f4f5;
+  --vscode-textBlockQuote-border: rgba(0, 0, 0, 0.18);
+  --vscode-textLink-foreground: #2563eb;
+  --vscode-textLink-activeForeground: #1d4ed8;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--ce-bg-primary);
+  color: var(--ce-fg-primary);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide empty rear composer utility tray & desktop download upsells when no Git branch or utility control is active */
+[data-composer-utility-rail]:not(:has([data-composer-navigation-target], button, a)),
+.home-banners:empty,
+[data-home-beacon-banner] {
+  display: none !important;
+}

@@ -1,0 +1,5 @@
+Welcome to Codex for Android (v2.1.325 — Native ARM64)!
+  * Package manager:  pkg update && pkg install <pkg>
+  * Claude CLI:       claude --version
+  * Shizuku shell:    rish -c "<command>"
+  * Fix paths:        cc-fix-paths
