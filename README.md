@@ -9,7 +9,7 @@
   <p><font color="#7d8590">Standalone <b>OpenAI Codex (<code>v26.51120</code> + CLI <code>0.171.0</code>)</b> agentic IDE &amp; native <b>ARM64 Android</b> APK — created and engineered by <a href="https://github.com/Yhoanes"><b>Yhoanes</b></a> (zero PRoot, zero Electron, zero Termux dependency, zero Gradle).</font></p>
 
   <p>
-    <code>v26.51120.1-r1</code> &nbsp;&bull;&nbsp;
+    <code>v26.51120.1-r2</code> &nbsp;&bull;&nbsp;
     <code>Android 9.0+ (API 28+)</code> &nbsp;&bull;&nbsp;
     <code>Official Codex Extension UI</code> &nbsp;&bull;&nbsp;
     <code>Direct Kernel execve() ARM64</code> &nbsp;&bull;&nbsp;
@@ -30,7 +30,7 @@
 
 ## Architectural Overview
 
-**Codex for Android (`v26.51120.1-r1`)** brings OpenAI's official **Codex VS Code Extension UI** (`openai.chatgpt` `v26.51120.41243`) paired with the native static ARM64 **`codex` CLI (`0.171.0-alpha.13.2`)** and **`codex-code-mode-host`** directly to Android phones and tablets as a self-contained standalone APK (`com.ce.ide`).
+**Codex for Android (`v26.51120.1-r2`)** brings OpenAI's official **Codex VS Code Extension UI** (`openai.chatgpt` `v26.51120.41243`) paired with the native static ARM64 **`codex` CLI (`0.171.0-alpha.13.2`)** and **`codex-code-mode-host`** directly to Android phones and tablets as a self-contained standalone APK (`com.ce.ide`).
 
 Unlike slow `proot-distro` containers, emulated Linux VMs, or remote SSH wrappers, **Codex for Android** executes natively on mobile ARM64 silicon via direct Linux kernel `execve()`: pairing static `aarch64` `codex.elf` + `codex-code-mode-host` engines with a hardened Bionic `Node.js` Extension Host (`codex-serve.cjs` + `vscode-shim.cjs`), an **O(1) byte-indexed asset archive (`webview-bundle.pak`)**, a 10-byte prefix-aligned **Android Bionic Linux userspace** (`/data/user/0/com.ce.ide/files/usr`) powered by **`ce-box`**, an inline mobile workspace selector, and a **1-Tap Native ARM64 MCP Plugins &amp; Skills Marketplace**.
 

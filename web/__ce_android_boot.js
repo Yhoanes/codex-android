@@ -1422,7 +1422,7 @@
     if (!otaSectionEl) return;
     var st = currentOtaState || { type: "idle" };
     var t = st.type || "idle";
-    var instVer = st.installedVersion || "26.51120.1-r1";
+    var instVer = st.installedVersion || "26.51120.1-r2";
     var remVer = st.version || "";
     var prog = typeof st.progress === "number" ? st.progress : -1;
     var rpc = getHostRpc();

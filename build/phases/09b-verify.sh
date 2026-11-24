@@ -73,10 +73,14 @@ with zipfile.ZipFile(apk, "r") as z:
         import tarfile
         with tarfile.open(fileobj=f, mode="r:gz") as tf:
             core_members = set(tf.getnames())
+            codex_elf_bytes = tf.extractfile("bin/codex.elf").read()
     for core_req in ("bin/node.elf", "bin/codex.elf", "bin/codex-code-mode-host"):
         if core_req not in core_members:
             sys.exit("[verify] FAIL codex-core.tar.gz missing %s" % core_req)
-    print("[verify] codex-core.tar.gz ok (%.2f MB stored, includes codex-code-mode-host)" % (total / (1024 * 1024)))
+    if b"/data/data/com.ce." not in codex_elf_bytes or b"/files/etc/resolv.conf\x00" not in codex_elf_bytes:
+        sys.exit("[verify] FAIL bin/codex.elf is missing Android musl resolv.conf patch!")
+    del codex_elf_bytes
+    print("[verify] codex-core.tar.gz ok (%.2f MB stored, includes codex-code-mode-host + Android DNS patch)" % (total / (1024 * 1024)))
 
     pak_info = z.getinfo("assets/core-archive/webview-bundle.pak")
     print("[verify] webview-bundle.pak ok (%.2f MB stored)" % (pak_info.file_size / (1024 * 1024)))
