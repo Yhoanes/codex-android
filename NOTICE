@@ -1,4 +1,4 @@
-Codex for Android (v26.51111.1-r1)
+Codex for Android (v26.51120.1-r1)
 Copyright (c) 2026 Yhoanes (https://github.com/Yhoanes/codex-android)
 
 ========================================================================
@@ -20,9 +20,9 @@ Original Engineering & Architecture by Yhoanes (2026):
   - Standalone ARM64 Android host architecture (com.ce.ide / com.ce.dev,
     10-byte prefix parity, zero PRoot, zero Electron, zero Termux dependency)
     running OpenAI's official Codex VS Code Extension (openai.chatgpt
-    v26.51111.21308) paired with the native static ARM64 codex CLI
-    (0.169.0-alpha.11.1) and codex-code-mode-host directly on Android silicon.
-  - O(1) indexed asset archive (webview-bundle.pak) serving 15,350 pre-indexed
+    v26.51120.41243) paired with the native static ARM64 codex CLI
+    (0.171.0-alpha.13.2) and codex-code-mode-host directly on Android silicon.
+  - O(1) indexed asset archive (webview-bundle.pak) serving 15,653 pre-indexed
     webview modules in < 2 ms without 15k-inode mobile storage extraction.
   - Capability-hardened local security stack: per-boot 256-bit loopback host
     authentication (CE_AUTH_TOKEN, HttpOnly SameSite=Strict cookies, X-CE-Token

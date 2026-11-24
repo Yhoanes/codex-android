@@ -293,6 +293,15 @@
       if (kind === "globe") {
         return '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M3.2 10H16.8M10 3C11.9 5 12.8 7.4 12.8 10C12.8 12.6 11.9 15 10 17C8.1 15 7.2 12.6 7.2 10C7.2 7.4 8.1 5 10 3Z" stroke="currentColor" stroke-width="1.3"/></svg>';
       }
+      if (kind === "shield") {
+        return '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2.5L16.2 5V9.8C16.2 13.7 13.5 16.4 10 17.6C6.5 16.4 3.8 13.7 3.8 9.8V5L10 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7.5 10L9.3 11.8L12.8 8.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      }
+      if (kind === "scissors") {
+        return '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="6" cy="6" r="2.3" stroke="currentColor" stroke-width="1.4"/><circle cx="6" cy="14" r="2.3" stroke="currentColor" stroke-width="1.4"/><path d="M8 7.4L16.5 14.5M8 12.6L16.5 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
+      }
+      if (kind === "flask") {
+        return '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 3H12.5M8.5 3V7.4L4.2 14.6C3.7 15.5 4.3 16.6 5.4 16.6H14.6C15.7 16.6 16.3 15.5 15.8 14.6L11.5 7.4V3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12.5H14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>';
+      }
       return '<svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="5" y="2.5" width="10" height="15" rx="2.2" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="14.7" r="0.9" fill="currentColor"/></svg>';
     }
   };
@@ -1413,7 +1422,7 @@
     if (!otaSectionEl) return;
     var st = currentOtaState || { type: "idle" };
     var t = st.type || "idle";
-    var instVer = st.installedVersion || "26.51111.1-r1";
+    var instVer = st.installedVersion || "26.51120.1-r1";
     var remVer = st.version || "";
     var prog = typeof st.progress === "number" ? st.progress : -1;
     var rpc = getHostRpc();

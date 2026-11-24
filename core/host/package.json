@@ -1,7 +1,7 @@
 {
   "name": "chatgpt",
   "publisher": "openai",
-  "version": "26.51111.21308",
+  "version": "26.51120.41243",
   "displayName": "Codex – OpenAI’s coding agent",
   "description": "Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -77,11 +77,6 @@
       {
         "command": "chatgpt.newChat",
         "title": "New Chat in ChatGPT Sidebar",
-        "category": "Codex"
-      },
-      {
-        "command": "chatgpt.showLspMcpCliArgs",
-        "title": "Copy Codex CLI args for LSP MCP",
         "category": "Codex"
       },
       {
@@ -248,12 +243,6 @@
         {
           "command": "chatgpt.newChat",
           "when": "(webviewId == 'chatgpt.sidebarView' || webviewId == 'chatgpt.sidebarSecondaryView') && chatgpt.supportsNewChatMenu"
-        }
-      ],
-      "commandPalette": [
-        {
-          "command": "chatgpt.showLspMcpCliArgs",
-          "when": "chatgpt.lspMcpEnabled"
         }
       ],
       "chatSessions/newSession": [

@@ -5,9 +5,10 @@
       "name": "craft-anything",
       "title": "Craft Anything + Ghidra",
       "version": "0.5.0",
+      "sha256": "492e168b15fa971a0a9f76d4e527ec600a1501e0dfe34e3e9f5c19f45030896a",
       "icon": "binary",
-      "shortEs": "Ingeniería inversa ARM64 (ELF, APK/DEX, IL2CPP, Firmware) y Ghidra 12.1",
-      "shortEn": "ARM64 binary & firmware reverse engineering (ELF, APK, IL2CPP) & Ghidra",
+      "shortEs": "Ingeniería inversa ARM64 (ELF, APK/DEX, IL2CPP, Firmware) y Ghidra 12.1.4",
+      "shortEn": "ARM64 binary & firmware reverse engineering (ELF, APK, IL2CPP) & Ghidra 12.1.4",
       "descriptionEs": "335 herramientas MCP nativas en Rust ARM64 para ingeniería inversa de binarios, consolas y firmware (ELF, PE, APK/DEX, .NET/NativeAOT, WASM, ESP32/UF2, Godot .pck, Unity IL2CPP) y Ghidra 12.1.4.",
       "description": "335 native ARM64 Rust MCP tools for binary & firmware reverse engineering (ELF, PE, APK/DEX, .NET/NativeAOT, WASM, ESP32/UF2, Godot .pck, Unity IL2CPP) & Ghidra 12.1.4.",
       "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/craft-anything/craft-anything.zip",
@@ -21,8 +22,9 @@
       "name": "agy-adb-bridge",
       "title": "ADB & Shizuku Bridge",
       "version": "1.0.1",
+      "sha256": "70672586a7f8a107055b67f5590913e62418e3535e9af0955d89607bb893e1a7",
       "icon": "terminal",
-      "shortEs": "Permisos shell uid=2000 persistentes vía ADB local y Shizuku rish",
+      "shortEs": "Permisos shell uid=2000 persistentes vía ADB local 5555 y Shizuku rish",
       "shortEn": "Persistent uid=2000 shell permissions via local wireless ADB & Shizuku",
       "descriptionEs": "Puente nativo en Rust ARM64 con permisos uid=2000(shell) persistentes: vinculación ADB inalámbrica de 6 dígitos en 127.0.0.1:5555 sin Wi-Fi y wrapper rish anti-bloqueo.",
       "description": "Persistent uid=2000(shell) native Rust ADB & Shizuku bridge with 6-digit wireless pairing and offline 127.0.0.1:5555 mode.",
@@ -36,7 +38,8 @@
       "id": "github",
       "name": "github",
       "title": "GitHub Native ARM64",
-      "version": "2.1.1",
+      "version": "2.1.1-android",
+      "sha256": "5637cc5f6f353c9cabbd5b4f51e06c64c5f7cdd8d8a2db7c0c7e3be2107cb183",
       "icon": "github",
       "shortEs": "91 herramientas locales para repositorios, PRs, Actions CI/CD e Issues",
       "shortEn": "91 local ARM64 tools for repos, PRs, Actions CI/CD logs, and Issues",
@@ -53,6 +56,7 @@
       "name": "game-studio",
       "title": "Game Studio 2D/3D (Godot)",
       "version": "2.0.0",
+      "sha256": "8cf5607b6a5091cd25418737f7907bd57aab9b709cdc8f99ccc2f94f4b283a6d",
       "icon": "gamepad",
       "shortEs": "Motor Godot 4 Vulkan 120 FPS, GDExtension C++/Rust y compilador APK local",
       "shortEn": "Godot 4 Vulkan 120 FPS engine, C++/Rust GDExtension & offline APK builder",
@@ -69,6 +73,7 @@
       "name": "unity-android",
       "title": "Unity Studio Android",
       "version": "1.0.0",
+      "sha256": "e495ed60400fc2787cb413154ff3b0491b44419e25305795f078be9410f2d87d",
       "icon": "cube",
       "shortEs": "Proyectos Unity 6.3 LTS URP 2D/3D, auditoría YAML, Unity CLI y GameCI",
       "shortEn": "Unity 6.3 LTS URP 2D/3D projects, YAML audit, Unity CLI & GameCI builds",
@@ -83,13 +88,14 @@
     {
       "id": "agy-video-studio",
       "name": "agy-video-studio",
-      "title": "Video Studio Pro",
-      "version": "4.0.0",
+      "title": "Video Studio 2D & Blender 5.0 3D",
+      "version": "3.0.2",
+      "sha256": "3e059904711f3036531b2d1128c2e8c4a46f4c3a96bd55e831d7af5ee7352605",
       "icon": "video",
-      "shortEs": "Edición multipista 60 FPS con GPU MediaCodec, subtítulos y puente CapCut",
-      "shortEn": "60 FPS multi-track GPU MediaCodec video editing, captions & CapCut bridge",
-      "descriptionEs": "Editor profesional nativo en Rust ARM64 y estudio Motion 60 FPS: multipista V2, subtítulos dinámicos, limpieza de voz, codificación GPU h264_mediacodec y exportación a CapCut.",
-      "description": "Native ARM64 Rust pro video editor & 60 FPS motion studio with GPU h264_mediacodec encoding, speech cleanup & CapCut export.",
+      "shortEs": "Edición 2D 60 FPS GPU MediaCodec + animación 3D Blender 5.0 Headless",
+      "shortEn": "2D 60 FPS GPU MediaCodec editing + Blender 5.0 Headless 3D animation",
+      "descriptionEs": "Estudio universal nativo Android ARM64 de edición 2D y animación 3D con Blender 5.0 Headless (Cycles + OpenImageDenoise), GPU h264_mediacodec, voces/SFX y puente CapCut.",
+      "description": "Universal native ARM64 2D video studio & Blender 5.0 Headless 3D cinema engine (Cycles + OpenImageDenoise), GPU h264_mediacodec & CapCut bridge.",
       "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/agy-video-studio/agy-video-studio.zip",
       "mcp": {
         "command": "/system/bin/sh",
@@ -97,44 +103,149 @@
       }
     },
     {
-      "id": "agy-video-gen",
-      "name": "agy-video-gen",
-      "title": "AI Video Generator",
-      "version": "1.0.0",
+      "id": "agy-remotion",
+      "name": "agy-remotion",
+      "title": "Remotion 4.0 Video Studio",
+      "version": "1.0.1",
+      "sha256": "2689fa14517ee441981131f660b725fdaf1d02f30d87ab948dd523bcbb1cbca5",
       "icon": "sparkles",
-      "shortEs": "Generación Text-to-Video, Image-to-Video y Lip-Sync con escalado 1080p",
-      "shortEn": "Text-to-Video, Image-to-Video & Lip-Sync generation with 1080p upscaling",
-      "descriptionEs": "Motor nativo en Rust ARM64 de generación de vídeo con IA (Text-to-Video, Image-to-Video consistente, First-Last Frame y Lip-Sync) + Super-Resolución GPU 1080p.",
-      "description": "Native ARM64 Rust AI video generator (Text-to-Video, Image-to-Video, First-Last Frame & Lip-Sync) + 1080p CAS GPU super-resolution.",
-      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/agy-video-gen/agy-video-gen.zip",
+      "shortEs": "Vídeos programáticos en React/TypeScript con Remotion 4.0 y GPU MediaCodec",
+      "shortEn": "Programmatic React/TypeScript videos with Remotion 4.0 & GPU MediaCodec",
+      "descriptionEs": "Estudio nativo ARM64 de Remotion 4.0 para crear trailers Keynote, lanzamientos SaaS, Reels 9:16 y motion graphics deterministas en React/TypeScript con render GPU.",
+      "description": "Native ARM64 Remotion 4.0 Studio for programmatic React/TypeScript videos, SaaS trailers, 9:16 kinetic captions & GPU h264_mediacodec rendering.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/agy-remotion/agy-remotion.zip",
       "mcp": {
         "command": "/system/bin/sh",
-        "args": ["$HOME/.codex/plugins-hub/agy-video-gen/mcp/bin/start-mcp.sh"]
+        "args": ["$HOME/.codex/plugins-hub/agy-remotion/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "peakcut",
+      "name": "peakcut",
+      "title": "PeakCut Pro: Live & AI Clipper",
+      "version": "1.0.0",
+      "sha256": "011d9e25ea27bfb39cc11dffad3581808d1c8002abf5e668ddd71fa59cb7a055",
+      "icon": "scissors",
+      "shortEs": "Clipping en caliente (Kick/Twitch/YouTube) y VODs a Shorts 9:16 con IA",
+      "shortEn": "Hot live stream & VOD AI clipper (9:16 face-tracking & karaoke captions)",
+      "descriptionEs": "Convierte directos en vivo (Kick, Twitch, YouTube) y podcasts largos en Shorts/TikToks 9:16 con seguimiento facial, subtítulos karaoke libass, sherpa-onnx offline y GPU.",
+      "description": "Turn live streams and VODs into 9:16 Shorts/TikToks with active-speaker face tracking, bouncy karaoke captions, offline sherpa-onnx ASR & GPU encoding.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/peakcut/peakcut.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/peakcut/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "cli-anything",
+      "name": "cli-anything",
+      "title": "CLI-Anything & CLI-Hub",
+      "version": "1.0.0",
+      "sha256": "fea75450003ebe892c8e2a7c697ad8e92c9138a3fa4e15f7160099ae6ce6fabb",
+      "icon": "terminal",
+      "shortEs": "Generador de CLIs agent-native y catálogo CLI-Hub con 103+ herramientas",
+      "shortEn": "Agent-native CLI builder & CLI-Hub catalog with 103+ pre-built tools",
+      "descriptionEs": "Construye y valida CLIs stateful en Python Click para agentes desde cualquier repositorio (metodología HARNESS.md) e instala 103+ CLIs precompilados desde CLI-Hub.",
+      "description": "Build, refine, and validate stateful agent-native CLIs from any codebase and browse/install 103+ pre-built tools from CLI-Hub on Android ARM64.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/cli-anything/cli-anything.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/cli-anything/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "artex-audit",
+      "name": "artex-audit",
+      "title": "ARTEX Security Audit Core",
+      "version": "1.0.0",
+      "sha256": "cf60fe71259d25864f79d54c6cb9ad9bb53e671eb1ebecf860bcf1360518ee53",
+      "icon": "shield",
+      "shortEs": "Auditoría de seguridad autorizada Dual-Graph (SQLite + consola local)",
+      "shortEn": "Authorized Dual-Graph security auditing (Asset/Exploration Graph + SQLite)",
+      "descriptionEs": "Auditoría estructurada de seguridad autorizada con arquitectura Dual-Graph en Rust ARM64 + SQLite, trazabilidad CWE/CVSS, exportación de reportes y panel local.",
+      "description": "Authorized Dual-Graph security auditing (Asset Graph + Exploration Graph) in native Rust ARM64 + SQLite with CWE/CVSS findings and local dashboard.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/artex-audit/artex-audit.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/artex-audit/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "artex-defense",
+      "name": "artex-defense",
+      "title": "ARTEX Blue-Team Defense",
+      "version": "1.0.0",
+      "sha256": "a36b34af4ed444e541b7b8ae98561ae0f3c46eb43eada2c59f8ce53da6776e23",
+      "icon": "shield",
+      "shortEs": "Detección Sigma/Suricata, triaje forense de host y cobertura MITRE ATT&CK",
+      "shortEn": "Sigma/Suricata detection, read-only host triage & MITRE ATT&CK v16 coverage",
+      "descriptionEs": "Ingeniería de detección Blue-Team en Rust ARM64: análisis de logs Sigma y Suricata, triaje forense de solo lectura, indicadores MISP/CSV y guías MITRE ATT&CK v16.",
+      "description": "Blue-Team detection engineering in native Rust ARM64: Sigma/Suricata log hunting, read-only host triage, MISP/CSV IOCs & MITRE ATT&CK v16 hardening.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/artex-defense/artex-defense.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/artex-defense/mcp/bin/start-mcp.sh"]
+      }
+    },
+    {
+      "id": "artex-recon",
+      "name": "artex-recon",
+      "title": "ARTEX API & Surface Recon",
+      "version": "1.0.0",
+      "sha256": "55c61697e164603bc9ca9e6d7f7d4e6aef062c4c7d447457c8241c69653c2472",
+      "icon": "globe",
+      "shortEs": "Descubrimiento no destructivo de rutas SPA, APIs, RBAC y diffs OpenAPI",
+      "shortEn": "Non-destructive SPA route, RBAC permission, API & OpenAPI diff discovery",
+      "descriptionEs": "Reconocimiento no destructivo de superficie API, mapas de rutas SPA, árboles de permisos RBAC, cabeceras de seguridad y comparación OpenAPI sincronizado con ARTEX.",
+      "description": "Non-destructive static & runtime API endpoint, SPA route-map, RBAC permission-tree, security header & OpenAPI diff discovery in Rust ARM64.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/artex-recon/artex-recon.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/artex-recon/mcp/bin/start-mcp.sh"]
       }
     },
     {
       "id": "chrome-devtools-plugin",
       "name": "chrome-devtools-plugin",
       "title": "Chrome DevTools MCP",
-      "version": "1.10.4",
+      "version": "1.10.4-android",
+      "sha256": "51708a163158433c6eced6cfeef6fbdee035d5d171f51b73c044ff736393967b",
       "icon": "globe",
       "shortEs": "Automatización Chromium headless ARM64, inspección DOM/red y capturas",
       "shortEn": "Headless ARM64 Chromium automation, DOM/network inspection & screenshots",
       "descriptionEs": "Automatización nativa de Chromium headless en Android ARM64, inspección de DOM y red, capturas de pantalla y auditoría Web Vitals mediante Chrome DevTools Protocol.",
       "description": "Native Android ARM64 headless Chromium automation, DOM/network inspection, screenshots & Web Vitals debugging via CDP.",
-      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/chrome-devtools-plugin/chrome-devtools-plugin.zip"
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/chrome-devtools-plugin/chrome-devtools-plugin.zip",
+      "mcp": {
+        "command": "/system/bin/sh",
+        "args": ["$HOME/.codex/plugins-hub/chrome-devtools-plugin/mcp/bin/start-mcp.sh"]
+      }
     },
     {
       "id": "android-cli-plugin",
       "name": "android-cli-plugin",
       "title": "Android SDK & CLI Skills",
-      "version": "1.0.16",
+      "version": "1.0.16-android",
+      "sha256": "527eb08becc331084b3d314d807910167edde3d9167b8323def853a3ef626e7e",
       "icon": "smartphone",
       "shortEs": "Habilidades oficiales de arquitectura Android, Compose y utilidades ADB",
       "shortEn": "Official Android architecture, Jetpack Compose & ADB device skills",
       "descriptionEs": "Puente Android CLI en el dispositivo, utilidades Shizuku rish y habilidades oficiales de arquitectura Android y Jetpack Compose adaptadas a ARM64.",
       "description": "On-device Android CLI bridge, Shizuku rish helpers, and official Android architecture skills adapted for ARM64.",
       "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/android-cli-plugin/android-cli-plugin.zip"
+    },
+    {
+      "id": "science",
+      "name": "science",
+      "title": "Science & Genomics Suite",
+      "version": "1.3.2-android",
+      "sha256": "72377c4da2b6d7951bd063ac6491440f5111320d8aaf85feb9c1f685589fcac8",
+      "icon": "flask",
+      "shortEs": "Investigación científica, cómputo numérico, bioinformática y análisis de datos",
+      "shortEn": "Scientific research, numerical computing, genomics & data analysis skills",
+      "descriptionEs": "Suite de investigación científica, bioinformática, visualización reproducible y cómputo numérico estructurado para Android ARM64.",
+      "description": "Scientific research, bioinformatics, reproducible visualization, and structured numerical data analysis workflows for Android ARM64.",
+      "archiveUrl": "https://raw.githubusercontent.com/Yhoanes/antigravity-android-plugins/main/plugins/science/science.zip"
     }
   ]
 }

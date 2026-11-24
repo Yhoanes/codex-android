@@ -6,14 +6,14 @@
 
   <h1 align="center">Codex for Android</h1>
 
-  <p><font color="#7d8590">Standalone <b>OpenAI Codex (<code>v26.51111</code> + CLI <code>0.169.0</code>)</b> agentic IDE &amp; native <b>ARM64 Android</b> APK — created and engineered by <a href="https://github.com/Yhoanes"><b>Yhoanes</b></a> (zero PRoot, zero Electron, zero Termux dependency, zero Gradle).</font></p>
+  <p><font color="#7d8590">Standalone <b>OpenAI Codex (<code>v26.51120</code> + CLI <code>0.171.0</code>)</b> agentic IDE &amp; native <b>ARM64 Android</b> APK — created and engineered by <a href="https://github.com/Yhoanes"><b>Yhoanes</b></a> (zero PRoot, zero Electron, zero Termux dependency, zero Gradle).</font></p>
 
   <p>
-    <code>v26.51111.1-r1</code> &nbsp;&bull;&nbsp;
+    <code>v26.51120.1-r1</code> &nbsp;&bull;&nbsp;
     <code>Android 9.0+ (API 28+)</code> &nbsp;&bull;&nbsp;
     <code>Official Codex Extension UI</code> &nbsp;&bull;&nbsp;
     <code>Direct Kernel execve() ARM64</code> &nbsp;&bull;&nbsp;
-    <code>Code Mode + Native MCP</code> &nbsp;&bull;&nbsp;
+    <code>Code Mode + 15 ARM64 MCP Plugins</code> &nbsp;&bull;&nbsp;
     <code>O(1) webview-bundle.pak</code> &nbsp;&bull;&nbsp;
     <code>Live GitHub OTA</code>
   </p>
@@ -30,7 +30,7 @@
 
 ## Architectural Overview
 
-**Codex for Android (`v26.51111.1-r1`)** brings OpenAI's official **Codex VS Code Extension UI** (`openai.chatgpt` `v26.51111.21308`) paired with the native static ARM64 **`codex` CLI (`0.169.0-alpha.11.1`)** and **`codex-code-mode-host`** directly to Android phones and tablets as a self-contained standalone APK (`com.ce.ide`).
+**Codex for Android (`v26.51120.1-r1`)** brings OpenAI's official **Codex VS Code Extension UI** (`openai.chatgpt` `v26.51120.41243`) paired with the native static ARM64 **`codex` CLI (`0.171.0-alpha.13.2`)** and **`codex-code-mode-host`** directly to Android phones and tablets as a self-contained standalone APK (`com.ce.ide`).
 
 Unlike slow `proot-distro` containers, emulated Linux VMs, or remote SSH wrappers, **Codex for Android** executes natively on mobile ARM64 silicon via direct Linux kernel `execve()`: pairing static `aarch64` `codex.elf` + `codex-code-mode-host` engines with a hardened Bionic `Node.js` Extension Host (`codex-serve.cjs` + `vscode-shim.cjs`), an **O(1) byte-indexed asset archive (`webview-bundle.pak`)**, a 10-byte prefix-aligned **Android Bionic Linux userspace** (`/data/user/0/com.ce.ide/files/usr`) powered by **`ce-box`**, an inline mobile workspace selector, and a **1-Tap Native ARM64 MCP Plugins &amp; Skills Marketplace**.
 
@@ -61,9 +61,9 @@ flowchart LR
 
 | Subsystem | Technical Implementation |
 | :--- | :--- |
-| **100% Official OpenAI Codex UI** | Runs OpenAI's unmodified `v26.51111.21308` `extension.js` and official webview UI with ChatGPT OAuth, GitHub Copilot OAuth, API Key sign-in, full **GPT-6** (`GPT-6.1 Sol`, `GPT-6 Astra`, `GPT-6.1 Terra`, `GPT-6 Sol`, `GPT-6 Luna`) &amp; **GPT-5.6** model selection, reasoning effort levels, diff viewer, and multi-thread history. |
-| **Native ARM64 `codex` + `codex-code-mode-host`** | Bundles both static `aarch64-unknown-linux-musl` binaries (`codex.elf` + `codex-code-mode-host`) so GPT-6 Code Mode (`exec` JS cells over `grpc+stdio://`) invokes native ARM64 MCP servers in `~30 ms` with zero container or socket sandbox conflicts. |
-| **Instant O(1) Asset Serving (`webview-bundle.pak`)** | Packs all `15,350` webview modules into a single byte-indexed archive (`webview-bundle.pak`), eliminating 15k-inode extraction delays on mobile UFS storage and serving assets in `< 2 ms`. |
+| **100% Official OpenAI Codex UI** | Runs OpenAI's unmodified `v26.51120.41243` `extension.js` and official webview UI with ChatGPT OAuth, GitHub Copilot OAuth, API Key sign-in, full **GPT-6** (`GPT-6.1 Sol`, `GPT-6 Astra`, `GPT-6.1 Terra`, `GPT-6 Sol`, `GPT-6 Luna`) &amp; **GPT-5.6** model selection, reasoning effort levels, diff viewer, and multi-thread history. |
+| **Native ARM64 `codex` + `codex-code-mode-host`** | Bundles both static `aarch64-unknown-linux-musl` binaries (`codex.elf` + `codex-code-mode-host` `0.171.0-alpha.13.2`) so GPT-6 Code Mode (`exec` JS cells over `grpc+stdio://`) invokes native ARM64 MCP servers in `~30 ms` with zero container or socket sandbox conflicts. |
+| **Instant O(1) Asset Serving (`webview-bundle.pak`)** | Packs all `15,653` webview modules into a single byte-indexed archive (`webview-bundle.pak`), eliminating 15k-inode extraction delays on mobile UFS storage and serving assets in `< 2 ms`. |
 | **Inline Mobile Workspace Selector** | Native horizontal composer pill (`+  ! Full access | 📁 workspace ▾`) integrated into `[data-composer-leading-controls]` with visual-viewport keyboard tracking, instant folder creation, recent project switching, and Android SAF directory picking. |
 | **Capability-Hardened Loopback Security** | Per-boot 256-bit `CE_AUTH_TOKEN` (`HttpOnly; SameSite=Strict` `ce_auth` cookie + `X-CE-Token` header), `HMAC-SHA256` nonce challenge on `/__ce_health`, strict loopback `Host`/`Origin` verification against DNS rebinding/CSRF, and explicit `403` confinement over `auth.json`, `.netrc`, and signing secrets. |
 | **1-Tap ARM64 MCP Marketplace &amp; Live GitHub OTA** | Install, toggle, or uninstall compiled **Android ARM64 Rust MCP servers** directly inside **Codex Settings &rarr; MCP Servers** with instant live session hot-reload (`config/mcpServer/reload`), paired with SHA-256 certificate-pinned **GitHub Releases OTA updates**. |
@@ -97,10 +97,13 @@ Execute **GPT-6 Astra** sessions directly against local Android storage and inst
 | **GitHub Native ARM64** | `v2.1.1` | 91 native ARM64 GitHub tools (repositories, PRs, code reviews, Issues, Actions CI/CD logs, security alerts) + native Bionic Git/GH OAuth setup without Docker. |
 | **Game Studio 2D/3D (Godot)** | `v2.0.0` | 16 native Rust MCP tools + ARM64 `GDExtension` (`C++`/`Rust`) compiler + 100% local offline signed `.apk` builder and 120–144 FPS Vulkan profiler for **Godot 4**. |
 | **Unity Studio Android** | `v1.0.0` | 13 native Rust MCP tools + ported **Unity CLI `v1.0.0`** for Unity 6.3 LTS URP 2D/3D scaffolding, deterministic `.meta`/YAML auditing, `$0` GameCI builds, and live debugging. |
-| **Video Studio Pro** | `v4.0.0` | Pro 60 FPS Motion Design &amp; universal video studio with `h264_mediacodec` GPU encoding, multi-track B-Roll, PiP/Split-Screen, Karaoke captions, and rootless CapCut Android timeline export. |
-| **AI Video Generator** | `v1.0.0` | Native Rust AI video generation engine (Text-to-Video, Image-to-Video, First-Last Frame bridging, scene extension, and Lip-Sync) + GPU super-resolution. |
+| **Video Studio 2D &amp; Blender 5.0 3D** | `v3.0.2` | Universal 2D 60 FPS GPU `h264_mediacodec` studio + **Blender 5.0 Headless 3D** (`Cycles` + `OpenImageDenoise`), procedural dialogue/SFX, and rootless CapCut Android export. |
+| **Remotion 4.0 Video Studio** | `v1.0.1` | Programmatic React/TypeScript video studio (`Remotion 4.0`) for Keynote trailers, SaaS launches, 9:16 kinetic captions, and GPU hardware encoding. |
+| **PeakCut Pro: Live &amp; AI Clipper** | `v1.0.0` | Hot live stream (`Kick`/`Twitch`/`YouTube`) &amp; VOD AI clipper into 9:16 Shorts/TikToks with active-speaker face tracking, bouncy karaoke captions, and offline `sherpa-onnx` ASR. |
+| **CLI-Anything &amp; CLI-Hub** | `v1.0.0` | Build, refine, and validate stateful agent-native Python Click CLIs from any repository + browse/install `103+` pre-built tools from CLI-Hub. |
+| **ARTEX Security Suite (3 Plugins)** | `v1.0.0` | Authorized Dual-Graph security auditing (`artex-audit`), Sigma/Suricata Blue-Team detection &amp; host triage (`artex-defense`), and non-destructive API/SPA surface recon (`artex-recon`). |
 | **Chrome DevTools MCP** | `v1.10.4` | Headless native ARM64 Chromium automation via Chrome DevTools Protocol (DOM snapshots, network inspection, screenshots, and Core Web Vitals auditing). |
-| **Android SDK &amp; CLI Skills** | `v1.0.0` | Official Android architecture, Jetpack Compose, Gradle/SDK workflows, and on-device `logcat`/`dumpsys` diagnostics. |
+| **Android SDK &amp; CLI + Science Suite** | `v1.3.2` | Official Android architecture, Jetpack Compose &amp; ADB device skills (`android-cli-plugin`), plus scientific computing, bioinformatics &amp; data analysis (`science`). |
 
 ---
 
